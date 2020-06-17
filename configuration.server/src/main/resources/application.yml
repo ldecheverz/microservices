@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    config:
+      server:
+        encrypt.enabled: false
+        git:
+          skip-ssl-validation: true
+          #          uri: https://gitlab-art.globallogic.com.ar/lucas.echeverz/microservices-config.git
+          #          searchPaths: people-management,auth-service,countries-management
+          #          username: lucas.echeverz
+          #          password: thiago_GL19
+          uri: https://lucasBitBucket@bitbucket.org/lucasBitBucket/microservices-config.git
+          searchPaths: people-management,auth-service,countries-management
+          username: lucasBitBucket
+          password: polacoLBT14
+  application:
+    name: spring-cloud-config-server
+server:
+  port: 8888
+logging:
+  level:
+    com.netflix: DEBUG
+    org.springframework.web: DEBUG
+    com.globallogic: DEBUG
